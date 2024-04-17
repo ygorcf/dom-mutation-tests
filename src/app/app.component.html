@@ -1,0 +1,15 @@
+<div
+  [ngClass]="divClass"
+  (mouseenter)="onEnterDiv()"
+  (mouseleave)="onLeaveDiv()"
+>
+  Hover here
+</div>
+
+<button *ngIf="showButton" (click)="onClickButton()">
+  Hidden button DONT CLICK
+</button>
+
+<div class="mutation-changes">
+  <span *ngFor="let change of changesFromMutation | async">{{ change }}</span>
+</div>
